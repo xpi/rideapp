@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_colar" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/text_password"
+        android:layout_alignRight="@+id/text_password"
+        android:layout_below="@+id/text_password"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/btn_style"
+        android:text="@string/login"
+        android:textColor="@color/btn_text_color" />
+
+    <EditText
+        android:id="@+id/text_username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/text_password"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/text_password"
+        android:layout_marginBottom="147dp"
+        android:background="@drawable/text_edit_style"
+        android:ems="10"
+        android:hint="@string/noteInputUser"
+        android:imeOptions="actionNext"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/text_password"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/text_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:background="@drawable/text_edit_style"
+        android:ems="10"
+        android:hint="@string/noteInputPwd"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:singleLine="true" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp" >
+    </RelativeLayout>
+
+</RelativeLayout>
