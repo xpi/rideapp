@@ -34,62 +34,91 @@ public final class R {
     public static final class drawable {
         public static final int bg_edittext_focused=0x7f020000;
         public static final int bg_edittext_normal=0x7f020001;
-        public static final int btn_focus=0x7f020002;
-        public static final int btn_normal=0x7f020003;
-        public static final int btn_style=0x7f020004;
-        public static final int ic_launcher=0x7f020005;
-        public static final int logo=0x7f020006;
-        public static final int logo_details=0x7f020007;
-        public static final int text_edit_style=0x7f020008;
+        public static final int btn_current=0x7f020002;
+        public static final int btn_current2=0x7f020003;
+        public static final int btn_current3=0x7f020004;
+        public static final int btn_focus=0x7f020005;
+        public static final int btn_normal=0x7f020006;
+        public static final int btn_out=0x7f020007;
+        public static final int btn_style=0x7f020008;
+        public static final int ic_launcher=0x7f020009;
+        public static final int input_bg_selector=0x7f02000a;
+        public static final int logo=0x7f02000b;
+        public static final int logo_details=0x7f02000c;
+        public static final int page1_bg=0x7f02000d;
+        public static final int page2_bg=0x7f02000e;
+        public static final int page3_bg=0x7f02000f;
+        public static final int text_edit_style=0x7f020010;
     }
     public static final class id {
-        public static final int action_settings=0x7f090004;
+        public static final int action_settings=0x7f090012;
+        public static final int bar_change_pwd=0x7f090010;
+        public static final int bar_findpwd=0x7f090011;
+        public static final int bar_regist=0x7f09000f;
+        public static final int btn_login=0x7f090009;
         public static final int button1=0x7f090001;
-        public static final int imageView1=0x7f090000;
-        public static final int text_password=0x7f090002;
-        public static final int text_username=0x7f090003;
+        public static final int button2=0x7f090002;
+        public static final int button3=0x7f090003;
+        public static final int editText1=0x7f09000c;
+        public static final int editText2=0x7f09000d;
+        public static final int editText3=0x7f09000e;
+        public static final int frame1_layout=0x7f090004;
+        public static final int imageView1=0x7f090008;
+        public static final int pager=0x7f090000;
+        public static final int textView1=0x7f090005;
+        public static final int textView2=0x7f090006;
+        public static final int textView3=0x7f090007;
+        public static final int text_password=0x7f09000a;
+        public static final int text_username=0x7f09000b;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int login_layout_normal=0x7f030001;
+        public static final int frame1=0x7f030001;
+        public static final int frame2=0x7f030002;
+        public static final int frame3=0x7f030003;
+        public static final int login_layout_normal=0x7f030004;
+        public static final int registe_layout=0x7f030005;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
+        public static final int login_menu=0x7f080000;
+        public static final int main=0x7f080001;
     }
     public static final class string {
         public static final int app_name=0x7f060001;
         public static final int back=0x7f060011;
-        public static final int cancel=0x7f060006;
-        public static final int chengePwd=0x7f060004;
-        public static final int chengePwdBtn=0x7f06000a;
+        public static final int cancel=0x7f060008;
+        public static final int chengePwd=0x7f060006;
+        public static final int chengePwdBtn=0x7f060009;
         public static final int cleanldata=0x7f06001c;
         public static final int currentLocation=0x7f060013;
         public static final int exist=0x7f060010;
         public static final int findPwd=0x7f06000e;
-        public static final int identifyEdit=0x7f060009;
+        public static final int hint_intput_email=0x7f06000d;
+        public static final int hint_reinputpwd=0x7f060003;
         public static final int lastupdate=0x7f06001b;
         public static final int locating=0x7f060015;
         public static final int location=0x7f060016;
         public static final int locationmsg=0x7f060014;
-        public static final int login=0x7f060005;
+        public static final int login=0x7f060007;
         public static final int logout=0x7f060012;
         public static final int logout_btn=0x7f060000;
-        public static final int newEdit=0x7f060008;
-        public static final int noteInputPwd=0x7f06000c;
-        public static final int noteInputUser=0x7f06000d;
+        public static final int noteInputPwd=0x7f06000b;
+        public static final int noteInputUser=0x7f06000c;
         public static final int note_icon=0x7f060019;
-        public static final int originalEdit=0x7f060007;
         public static final int pulltorefresh=0x7f06001a;
-        public static final int reSign=0x7f06000b;
+        public static final int reSign=0x7f06000a;
+        public static final int regist=0x7f060002;
         public static final int reset=0x7f06000f;
         public static final int settings=0x7f060018;
         public static final int sign_history=0x7f060017;
         public static final int staffloca=0x7f06001d;
-        public static final int userName=0x7f060002;
-        public static final int userPwd=0x7f060003;
+        public static final int userName=0x7f060004;
+        public static final int userPwd=0x7f060005;
     }
     public static final class style {
-        public static final int AcBar_titleStyle=0x7f070002;
+        public static final int AcBar_titleStyle=0x7f070003;
+        public static final int ActionBarMenu=0x7f070005;
+        public static final int ActionBarTitle=0x7f070002;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -122,6 +151,6 @@ public final class R {
         /**  Application theme. 
          */
         public static final int AppTheme=0x7f070001;
-        public static final int myActionBarStyle=0x7f070003;
+        public static final int myActionBarStyle=0x7f070004;
     }
 }
