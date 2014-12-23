@@ -26,6 +26,10 @@
             android:name=".RegistActivity"
             android:label="@string/back" >
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/back" >
+        </activity>
     </application>
 
 </manifest>

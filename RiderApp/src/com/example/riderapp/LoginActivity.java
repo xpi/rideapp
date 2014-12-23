@@ -7,26 +7,33 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 
 public class LoginActivity extends Activity {
+	private Button login_btn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login_layout_normal);
+		login_btn = (Button) findViewById(R.id.btn_login);
+		login_btn.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(LoginActivity.this,
+						MainActivity.class);
+				startActivity(intent);
+			}
+		});
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.login_menu, menu);
-		return true;
-	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-	
+
 		int id = item.getItemId();
 		if (id == R.id.bar_regist) {
 			Intent intent = new Intent(this, RegistActivity.class);
@@ -34,26 +41,12 @@ public class LoginActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
 	@Override
-	public boolean onMenuOpened(int featureId, Menu menu) {
-		setOverflowIconVisible(featureId, menu);
-		return super.onMenuOpened(featureId, menu);
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.login_menu, menu);
+		return true;
 	}
 
-	// 显示actionbar中下拉菜单的图标
-	public static void setOverflowIconVisible(int featureId, Menu menu) {
-		if (featureId == Window.FEATURE_ACTION_BAR && menu != null) {
-			if (menu.getClass().getSimpleName().equals("MenuBuilder")) {
-				try {
-					Method m = menu.getClass().getDeclaredMethod(
-							"setOptionalIconsVisible", Boolean.TYPE);
-					m.setAccessible(true);
-					m.invoke(menu, true);
-				} catch (Exception e) {
-				}
-			}
-		}
-	}
+
 
 }

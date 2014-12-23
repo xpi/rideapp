@@ -16,6 +16,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#FFFFFF"
     android:orientation="vertical" >
 
     <android.support.v4.view.ViewPager
@@ -23,6 +24,7 @@
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="358dp"
+        
         android:layout_weight="0.60" />
 
     <LinearLayout
@@ -34,25 +36,25 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="#dddccc"
-            android:text="page1" />
+            android:background="@color/main_colar"
+            android:text="游记" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="#daaaee"
-            android:text="page2" />
+            android:background="@color/main_colar"
+            android:text="活动" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:background="#dddfff"
-            android:text="page3" />
+            android:background="@color/main_colar"
+            android:text="我" />
     </LinearLayout>
-<!--      #dddccc #daaaee #dddfff -->
+    <!-- #dddccc #daaaee #dddfff -->
 
 </LinearLayout>

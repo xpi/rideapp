@@ -16,52 +16,51 @@
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:padding="10dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-      >
-          <Button
-        android:id="@+id/btn_login"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/text_password"
-        android:layout_alignRight="@+id/text_password"
-        android:layout_below="@+id/text_password"
-        android:layout_marginTop="18dp"
-        android:background="@drawable/btn_style"
-        android:text="@string/login"
-        android:textColor="@color/btn_text_color" />
+        android:padding="10dp" >
 
-    <EditText
-        android:id="@+id/text_username"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/text_password"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/text_password"
-        android:layout_marginBottom="147dp"
-        android:background="@drawable/text_edit_style"
-        android:ems="10"
-        android:hint="@string/noteInputUser"
-        android:imeOptions="actionNext"
-        android:singleLine="true" >
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/text_password"
+            android:layout_alignRight="@+id/text_password"
+            android:layout_below="@+id/text_password"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/btn_style"
+            android:text="@string/login"
+            android:textColor="@color/btn_text_color" />
 
-        <requestFocus />
-    </EditText>
+        <EditText
+            android:id="@+id/text_username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/text_password"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/text_password"
+            android:layout_marginBottom="147dp"
+            android:background="@drawable/text_edit_style"
+            android:ems="10"
+            android:hint="@string/noteInputUser"
+            android:imeOptions="actionNext"
+            android:singleLine="true" >
 
-    <EditText
-        android:id="@+id/text_password"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/text_username"
-        android:layout_marginTop="62dp"
-        android:background="@drawable/text_edit_style"
-        android:ems="10"
-        android:hint="@string/noteInputPwd"
-        android:imeOptions="actionDone"
-        android:inputType="textPassword"
-        android:singleLine="true" />
+            <requestFocus />
+        </EditText>
 
+        <EditText
+            android:id="@+id/text_password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/text_username"
+            android:layout_marginTop="62dp"
+            android:background="@drawable/text_edit_style"
+            android:ems="10"
+            android:hint="@string/noteInputPwd"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:singleLine="true" />
     </RelativeLayout>
-  
+
 </RelativeLayout>
