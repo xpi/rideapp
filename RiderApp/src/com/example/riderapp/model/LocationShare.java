@@ -1,0 +1,1 @@
+package com.example.riderapp.model;public class LocationShare {}

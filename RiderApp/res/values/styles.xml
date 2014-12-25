@@ -24,18 +24,12 @@
 
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <item name="android:actionBarStyle">@style/myActionBarStyle</item>
-        <item name="android:actionMenuTextAppearance">@style/ActionBarTitle</item>
     </style>
 
-    <style name="ActionBarTitle" parent="@android:style/TextAppearance.Holo.Large">
-        <item name="android:textColor">@android:color/holo_blue_bright</item>
-        <item name="android:textSize">18sp</item>
-    </style>
 
     <style name="AcBar_titleStyle">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">@color/main_colar</item>
     </style>
 
     <style name="myActionBarStyle" parent="android:Widget.ActionBar">
@@ -48,9 +42,5 @@
         <item name="android:windowActionBarOverlay">true</item>
     </style>
 
-    <style name="ActionBarMenu" parent="@android:style/TextAppearance.Holo.Large">
-        <item name="android:textColor">@android:color/holo_blue_light</item>
-        <item name="android:textSize">20sp</item>
-    </style>
 
 </resources>

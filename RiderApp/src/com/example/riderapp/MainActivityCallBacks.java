@@ -1,0 +1,1 @@
+package com.example.riderapp;import com.example.riderapp.model.Artical;import com.example.riderapp.model.RideActivity;public interface MainActivityCallBacks {	public void onActivitySelected(RideActivity rideActivity);	public void onArticalSelected(Artical artical);}

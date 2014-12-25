@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/user_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#FFFFFF"
+        android:src="@drawable/bar_self_color" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_photo"
+        android:layout_centerHorizontal="true"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        android:text="Your Name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/user_activity"
+        android:background="@drawable/btn_style2"
+        android:drawableLeft="@drawable/bar_team_color_green"
+        android:gravity="left|center"
+        android:text="@string/my_join_acti"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/user_activity"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/user_artical"
+        android:background="@drawable/btn_style2"
+        android:drawableLeft="@drawable/bar_activity_color"
+        android:gravity="left|center"
+        android:text="@string/my_activity"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/user_artical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/user_name"
+        android:background="@drawable/btn_style2"
+        android:drawableLeft="@drawable/bar_article_color"
+        android:gravity="left|center"
+        
+        android:text="@string/my_artical"
+        android:textSize="14sp" />
+
+</RelativeLayout>

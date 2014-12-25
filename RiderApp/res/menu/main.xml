@@ -3,9 +3,30 @@
     tools:context="com.example.riderapp.MainActivity" >
 
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/app_name"/>
+        android:icon="@drawable/bar_search"
+        android:orderInCategory="1"
+        android:showAsAction="always"
+        android:title="Search"/>
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/bar_plus"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:title="SubMenu">
+        <menu>
+            <item
+                android:id="@+id/artical_add"
+                android:icon="@drawable/bar_artical"
+                android:title="@string/add_acti"/>
+            <item
+                android:id="@+id/activity_add"
+                android:icon="@drawable/bar_activity"
+                android:title="@string/add_arti"/>
+            <item
+                android:id="@+id/team_create"
+                android:icon="@drawable/bar_team"
+                android:title="@string/share_location"/>
+        </menu>
+    </item>
 
 </menu>

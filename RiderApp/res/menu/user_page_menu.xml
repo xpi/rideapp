@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.riderapp.MainActivity" >
+
+ 
+    <item
+        android:id="@+id/add"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:title="@string/settings">
+        <menu>
+            <item
+                android:id="@+id/artical_add"
+                android:icon="@drawable/bar_settings"
+                android:title="@string/settings"/>
+            <item
+                android:id="@+id/activity_add"
+                android:icon="@drawable/bar_team"
+                android:title="add activity"/>
+        </menu>
+    </item>
+
+</menu>
