@@ -1,62 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent" android:padding="6dp"
-    android:layout_height="fill_parent" >
-
-    <TextView
-        android:id="@+id/from_where"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/title"
-        android:layout_below="@+id/title"
-        android:text="from where"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/from_where"
-        android:layout_toRightOf="@+id/from_where"
-        android:text="→"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/to_where"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_toRightOf="@+id/textView3"
-        android:text="to where"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <TextView
-        android:id="@+id/content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/from_where"
-        android:layout_below="@+id/from_where"
-        android:layout_marginTop="15dp"
-        android:text="content"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/leader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="leader"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="6dp" >
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/ra_editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_margin="2dp"
-        android:layout_toLeftOf="@+id/button1"
+        android:layout_toLeftOf="@+id/ra_button1"
         android:background="@drawable/text_edit_style"
         android:ems="10" >
 
@@ -64,7 +19,7 @@
     </EditText>
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/ra_button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -75,13 +30,46 @@
         android:textColor="#ffffff" />
 
     <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:id="@+id/ra_title"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/leader"
-        android:layout_below="@+id/leader"
-        android:layout_marginTop="21dp"
+        android:layout_alignLeft="@+id/ra_other_info"
+        android:layout_below="@+id/ra_leader"
+        android:layout_margin="10dp"
+        android:background="@drawable/text_bottom_line"
         android:text="Title"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ra_leader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ra_title"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/ra_title"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/text_bottom_line"
+        android:text="leader"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/ra_other_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ra_title"
+        android:background="@drawable/text_stroke_line"
+        android:padding="6dp"
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/ra_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ra_other_info"
+        android:layout_below="@+id/ra_other_info"
+        android:layout_marginTop="16dp"
+        android:text="content"
+        android:textSize="16sp" />
 
 </RelativeLayout>

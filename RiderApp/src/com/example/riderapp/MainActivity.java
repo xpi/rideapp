@@ -3,6 +3,7 @@ package com.example.riderapp;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+import com.baidu.mapapi.utils.DistanceUtil;
 import com.example.riderapp.model.Artical;
 import com.example.riderapp.model.RideActivity;
 
@@ -15,6 +16,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -22,6 +24,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewConfiguration;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -33,6 +36,7 @@ public class MainActivity extends FragmentActivity implements
 	private Fragment f1 = new ArticalPage();
 	private Fragment f2 = new ActivityPage();
 	private Fragment f3 = new InformationPage();
+	private FragmentManager fragmentManager;
 	private Fragment[] fras = { f1, f2, f3 };
 	private static final int CAMERA_REQUEST = 1888;
 
@@ -65,12 +69,11 @@ public class MainActivity extends FragmentActivity implements
 		initUI();
 		// hackOverFlow();
 		// viewpager使用方法类似ListView
-
+		fragmentManager = this.getSupportFragmentManager();
 		mPager = (ViewPager) findViewById(R.id.pager);
 		mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
 		mPager.setAdapter(mPagerAdapter);
 		mPager.setCurrentItem(0);
-
 		mPager.setOnPageChangeListener(new OnPageChangeListener() {
 
 			@Override
@@ -172,18 +175,15 @@ public class MainActivity extends FragmentActivity implements
 		// TODO Auto-generated method stub
 
 		if (item.getItemId() == R.id.artical_add) {
-//			Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-//			startActivityForResult(cameraIntent, CAMERA_REQUEST);
-			
-			
-			
-			
+			// Intent cameraIntent = new
+			// Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+			// startActivityForResult(cameraIntent, CAMERA_REQUEST);
+
 		}
 
 		return true;
 	}
 
-	
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		if (requestCode == CAMERA_REQUEST) {
@@ -214,9 +214,18 @@ public class MainActivity extends FragmentActivity implements
 
 	// viewpager scroll listener
 	private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
+
 		public ScreenSlidePagerAdapter(FragmentManager fm) {
 			super(fm);
 		}
+		
+		
+		// without do any anything when destroyed,in case to holding the hiden page
+		@Override
+		public void destroyItem(ViewGroup container, int position, Object object) {
+		}
+
+	
 
 		@Override
 		public Fragment getItem(int position) {
@@ -269,7 +278,10 @@ public class MainActivity extends FragmentActivity implements
 	@Override
 	public void onActivitySelected(RideActivity rideActivity) {
 		// TODO Auto-generated method stub
+		Intent intent = new Intent(this, ActivityDetialActivity.class);
+		intent.putExtra("rideactivity", rideActivity);
 
+		startActivity(intent);
 	}
 
 	@Override
