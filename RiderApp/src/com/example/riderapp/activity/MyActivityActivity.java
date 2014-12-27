@@ -1,0 +1,1 @@
+package com.example.riderapp.activity;public class MyActivityActivity {}

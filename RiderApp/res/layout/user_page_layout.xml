@@ -2,16 +2,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp" >
 
-    <ImageView
+    <com.example.riderapp.uiutils.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/user_photo"
-        android:layout_width="fill_parent"
+        android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="#FFFFFF"
-        android:src="@drawable/bar_self_color" />
+        android:src="@drawable/princess_flower"
+       android:layout_margin="10dp"
+        app:border_color="#cdcdcd"
+        app:border_width="2dp" />
 
     <TextView
         android:id="@+id/user_name"
@@ -55,10 +59,33 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/user_name"
         android:background="@drawable/btn_style2"
-        android:drawableLeft="@drawable/bar_article_color"
+        android:drawableLeft="@drawable/icon_actical"
         android:gravity="left|center"
-        
         android:text="@string/my_artical"
         android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/button2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:background="@drawable/btn_style2"
+        android:drawableLeft="@drawable/icon_loaction_share"
+        android:gravity="left|center"
+        android:text="@string/current_location_shared" />
+
+    <Button
+        android:id="@+id/button3"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_style2"
+        android:drawableLeft="@drawable/icon_setting_zi"
+        android:gravity="left|center"
+        android:text="@string/settings" />
 
 </RelativeLayout>

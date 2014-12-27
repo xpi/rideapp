@@ -24,8 +24,12 @@
                 android:title="@string/add_arti"/>
             <item
                 android:id="@+id/team_create"
+                android:icon="@drawable/icon_team_create"
+                android:title="@string/team_create"/>
+            <item
+                android:id="@+id/team_join"
                 android:icon="@drawable/bar_team"
-                android:title="@string/share_location"/>
+                android:title="@string/team_join"/>
         </menu>
     </item>
 

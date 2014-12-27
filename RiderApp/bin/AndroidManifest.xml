@@ -42,7 +42,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".LoginActivity"
+            android:name=".activity.LoginActivity"
             android:label="@string/back" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,21 +51,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegistActivity"
+            android:name=".activity.RegistActivity"
             android:label="@string/back" >
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/back" >
         </activity>
         <activity
-            android:name=".ArticalDetialActivity"
+            android:name=".activity.ArticalDetialActivity"
             android:label="@string/back" >
         </activity>
         <activity
-            android:name=".ActivityDetialActivity"
+            android:name=".activity.ActivityDetialActivity"
+            android:label="@string/back" >
+        </activity>
+         <activity
+            android:name=".activity.MyArticalActivity"
             android:label="@string/back" >
         </activity>
     </application>
+    
 
 </manifest>

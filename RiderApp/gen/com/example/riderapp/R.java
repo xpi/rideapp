@@ -9,6 +9,25 @@ package com.example.riderapp;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int border_color=0x7f010001;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int border_width=0x7f010000;
     }
     public static final class color {
         public static final int black=0x7f04000b;
@@ -41,45 +60,51 @@ public final class R {
         public static final int bar_activity_color=0x7f020001;
         public static final int bar_artical=0x7f020002;
         public static final int bar_article_color=0x7f020003;
-        public static final int bar_location=0x7f020004;
-        public static final int bar_pen=0x7f020005;
-        public static final int bar_plus=0x7f020006;
-        public static final int bar_refresh=0x7f020007;
-        public static final int bar_search=0x7f020008;
-        public static final int bar_self=0x7f020009;
-        public static final int bar_self_color=0x7f02000a;
-        public static final int bar_settings=0x7f02000b;
-        public static final int bar_team=0x7f02000c;
-        public static final int bar_team_color_green=0x7f02000d;
-        public static final int bg_edittext_focused=0x7f02000e;
-        public static final int bg_edittext_normal=0x7f02000f;
-        public static final int bottom_bar_bg=0x7f020010;
-        public static final int btn_bottom_bar=0x7f020011;
-        public static final int btn_current=0x7f020012;
-        public static final int btn_current2=0x7f020013;
-        public static final int btn_current3=0x7f020014;
-        public static final int btn_focus=0x7f020015;
-        public static final int btn_focus_gray=0x7f020016;
-        public static final int btn_normal=0x7f020017;
-        public static final int btn_normal_white=0x7f020018;
-        public static final int btn_out=0x7f020019;
-        public static final int btn_select=0x7f02001a;
-        public static final int btn_style=0x7f02001b;
-        public static final int btn_style2=0x7f02001c;
-        public static final int costum_progress_bar=0x7f02001d;
-        public static final int haight_ashbury=0x7f02001e;
-        public static final int ic_launcher=0x7f02001f;
-        public static final int ic_pulltorefresh_arrow=0x7f020020;
-        public static final int input_bg_selector=0x7f020021;
-        public static final int logo=0x7f020022;
-        public static final int logo_details=0x7f020023;
-        public static final int page1_bg=0x7f020024;
-        public static final int page2_bg=0x7f020025;
-        public static final int page3_bg=0x7f020026;
-        public static final int princess_flower=0x7f020027;
-        public static final int text_bottom_line=0x7f020028;
-        public static final int text_edit_style=0x7f020029;
-        public static final int text_stroke_line=0x7f02002a;
+        public static final int bar_create_team=0x7f020004;
+        public static final int bar_location=0x7f020005;
+        public static final int bar_pen=0x7f020006;
+        public static final int bar_plus=0x7f020007;
+        public static final int bar_refresh=0x7f020008;
+        public static final int bar_search=0x7f020009;
+        public static final int bar_self=0x7f02000a;
+        public static final int bar_self_color=0x7f02000b;
+        public static final int bar_settings=0x7f02000c;
+        public static final int bar_team=0x7f02000d;
+        public static final int bar_team_color_green=0x7f02000e;
+        public static final int bg_edittext_focused=0x7f02000f;
+        public static final int bg_edittext_normal=0x7f020010;
+        public static final int bottom_bar_bg=0x7f020011;
+        public static final int btn_bottom_bar=0x7f020012;
+        public static final int btn_current=0x7f020013;
+        public static final int btn_current2=0x7f020014;
+        public static final int btn_current3=0x7f020015;
+        public static final int btn_focus=0x7f020016;
+        public static final int btn_focus_gray=0x7f020017;
+        public static final int btn_normal=0x7f020018;
+        public static final int btn_normal_white=0x7f020019;
+        public static final int btn_out=0x7f02001a;
+        public static final int btn_select=0x7f02001b;
+        public static final int btn_style=0x7f02001c;
+        public static final int btn_style2=0x7f02001d;
+        public static final int circle_stroke=0x7f02001e;
+        public static final int costum_progress_bar=0x7f02001f;
+        public static final int haight_ashbury=0x7f020020;
+        public static final int ic_launcher=0x7f020021;
+        public static final int ic_pulltorefresh_arrow=0x7f020022;
+        public static final int icon_actical=0x7f020023;
+        public static final int icon_loaction_share=0x7f020024;
+        public static final int icon_setting_zi=0x7f020025;
+        public static final int icon_team_create=0x7f020026;
+        public static final int input_bg_selector=0x7f020027;
+        public static final int logo=0x7f020028;
+        public static final int logo_details=0x7f020029;
+        public static final int page1_bg=0x7f02002a;
+        public static final int page2_bg=0x7f02002b;
+        public static final int page3_bg=0x7f02002c;
+        public static final int princess_flower=0x7f02002d;
+        public static final int text_bottom_line=0x7f02002e;
+        public static final int text_edit_style=0x7f02002f;
+        public static final int text_stroke_line=0x7f020030;
     }
     public static final class id {
         public static final int acti_from_where=0x7f09000e;
@@ -88,7 +113,7 @@ public final class R {
         public static final int activity_add=0x7f090034;
         public static final int add=0x7f090033;
         public static final int artical_add=0x7f09002f;
-        public static final int artical_title=0x7f09001d;
+        public static final int artical_title=0x7f09001c;
         public static final int bar_change_pwd=0x7f090031;
         public static final int bar_findpwd=0x7f090032;
         public static final int bar_regist=0x7f090030;
@@ -97,14 +122,14 @@ public final class R {
         public static final int button1=0x7f090013;
         public static final int button2=0x7f090014;
         public static final int button3=0x7f090015;
-        public static final int content=0x7f09001a;
-        public static final int editText1=0x7f09001c;
+        public static final int content=0x7f090019;
+        public static final int editText1=0x7f09001b;
         public static final int editText2=0x7f090029;
         public static final int editText3=0x7f09002a;
-        public static final int frame1_layout=0x7f090016;
-        public static final int from_where=0x7f090017;
+        public static final int frame1_layout=0x7f09001d;
+        public static final int from_where=0x7f090016;
         public static final int imageView1=0x7f090006;
-        public static final int leader=0x7f09001b;
+        public static final int leader=0x7f09001a;
         public static final int load_more_footer=0x7f09001e;
         public static final int load_more_progressBar=0x7f090020;
         public static final int pager=0x7f090012;
@@ -120,6 +145,7 @@ public final class R {
         public static final int ra_other_info=0x7f090003;
         public static final int ra_title=0x7f090002;
         public static final int team_create=0x7f090035;
+        public static final int team_join=0x7f090036;
         public static final int textView1=0x7f090007;
         public static final int textView2=0x7f090009;
         public static final int textView3=0x7f09000a;
@@ -127,8 +153,8 @@ public final class R {
         public static final int textView5=0x7f090010;
         public static final int text_password=0x7f090022;
         public static final int text_username=0x7f090023;
-        public static final int title=0x7f090018;
-        public static final int to_where=0x7f090019;
+        public static final int title=0x7f090017;
+        public static final int to_where=0x7f090018;
         public static final int top_line=0x7f09001f;
         public static final int total_day=0x7f09000c;
         public static final int total_members=0x7f090011;
@@ -141,15 +167,15 @@ public final class R {
         public static final int activity_details=0x7f030000;
         public static final int activity_item_layout=0x7f030001;
         public static final int activity_main=0x7f030002;
-        public static final int activity_page_layout=0x7f030003;
-        public static final int arctical_layout=0x7f030004;
-        public static final int artical_details=0x7f030005;
-        public static final int artical_item_layout=0x7f030006;
-        public static final int frame2=0x7f030007;
-        public static final int load_more_footer=0x7f030008;
-        public static final int login_layout_normal=0x7f030009;
-        public static final int pull_and_load=0x7f03000a;
-        public static final int pull_to_refresh_header=0x7f03000b;
+        public static final int artical_details=0x7f030003;
+        public static final int artical_item_layout=0x7f030004;
+        public static final int frame2=0x7f030005;
+        public static final int load_layout=0x7f030006;
+        public static final int load_more_footer=0x7f030007;
+        public static final int login_layout_normal=0x7f030008;
+        public static final int pull_and_load=0x7f030009;
+        public static final int pull_to_refresh_header=0x7f03000a;
+        public static final int refresh_load_layout=0x7f03000b;
         public static final int registe_layout=0x7f03000c;
         public static final int user_page_layout=0x7f03000d;
     }
@@ -160,21 +186,22 @@ public final class R {
         public static final int user_page_menu=0x7f080003;
     }
     public static final class string {
-        public static final int add_acti=0x7f06001d;
-        public static final int add_arti=0x7f06001e;
+        public static final int add_acti=0x7f06001e;
+        public static final int add_arti=0x7f06001f;
         public static final int app_name=0x7f060002;
         public static final int back=0x7f060016;
         public static final int cancel=0x7f06000d;
         public static final int chengePwd=0x7f06000b;
         public static final int chengePwdBtn=0x7f06000e;
         public static final int currentLocation=0x7f060019;
+        public static final int current_location_shared=0x7f060020;
         public static final int day=0x7f060018;
         public static final int exist=0x7f060015;
         public static final int findPwd=0x7f060013;
-        public static final int hello=0x7f060021;
+        public static final int hello=0x7f060023;
         public static final int hint_intput_email=0x7f060012;
         public static final int hint_reinputpwd=0x7f060008;
-        public static final int join_team=0x7f06001f;
+        public static final int join_team=0x7f060021;
         public static final int locationmsg=0x7f06001a;
         public static final int login=0x7f06000c;
         public static final int logout=0x7f060017;
@@ -185,17 +212,18 @@ public final class R {
         public static final int my_save=0x7f060006;
         public static final int noteInputPwd=0x7f060010;
         public static final int noteInputUser=0x7f060011;
-        public static final int pull_to_refresh_pull_label=0x7f060022;
-        public static final int pull_to_refresh_refreshing_label=0x7f060024;
-        public static final int pull_to_refresh_release_label=0x7f060023;
-        public static final int pull_to_refresh_tap_label=0x7f060025;
+        public static final int pull_to_refresh_pull_label=0x7f060024;
+        public static final int pull_to_refresh_refreshing_label=0x7f060026;
+        public static final int pull_to_refresh_release_label=0x7f060025;
+        public static final int pull_to_refresh_tap_label=0x7f060027;
         public static final int reSign=0x7f06000f;
         public static final int regist=0x7f060003;
         public static final int reset=0x7f060014;
         public static final int sent=0x7f060001;
         public static final int settings=0x7f06001b;
-        public static final int share_location=0x7f06001c;
-        public static final int staffloca=0x7f060020;
+        public static final int staffloca=0x7f060022;
+        public static final int team_create=0x7f06001c;
+        public static final int team_join=0x7f06001d;
         public static final int userName=0x7f060009;
         public static final int userPwd=0x7f06000a;
     }
@@ -235,4 +263,52 @@ public final class R {
         public static final int AppTheme=0x7f070001;
         public static final int myActionBarStyle=0x7f070003;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a CircleImageView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CircleImageView_border_color com.example.riderapp:border_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_border_width com.example.riderapp:border_width}</code></td><td></td></tr>
+           </table>
+           @see #CircleImageView_border_color
+           @see #CircleImageView_border_width
+         */
+        public static final int[] CircleImageView = {
+            0x7f010000, 0x7f010001
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.riderapp.R.attr#border_color}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.riderapp:border_color
+        */
+        public static final int CircleImageView_border_color = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.riderapp.R.attr#border_width}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.riderapp:border_width
+        */
+        public static final int CircleImageView_border_width = 0;
+    };
 }

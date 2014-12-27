@@ -29,10 +29,13 @@
     <string name="currentLocation">当前位置</string>
     <string name="locationmsg">当前位置(若不准确请重新定位)</string>
     <string name="settings">设置</string>
-    <string name="share_location">加入队伍</string>
+    <string name="team_create">创建队伍</string>
+    <string name="team_join">加入队伍</string>
     <string name="add_acti">发布活动</string>
     <string name="add_arti">发布游记</string>
+    <string name="current_location_shared">当前位置共享地图</string>
     <string name="join_team">加入位置共享</string>
+
     <string name="staffloca">位置共享</string>
     <string name="hello">Hello World, LoadMoreListView!</string>
     <string name="pull_to_refresh_pull_label">下拉刷新...</string>
