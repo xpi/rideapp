@@ -1,17 +1,24 @@
 package com.example.riderapp.activity;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.Calendar;
+import java.util.Locale;
 
-import com.baidu.mapapi.utils.DistanceUtil;
 import com.example.riderapp.R;
 import com.example.riderapp.model.Artical;
 import com.example.riderapp.model.RideActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -21,16 +28,21 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.text.format.DateFormat;
+import android.util.Log;
+import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 
 public class MainActivity extends FragmentActivity implements
 		MainActivityCallBacks {
@@ -40,6 +52,10 @@ public class MainActivity extends FragmentActivity implements
 	private FragmentManager fragmentManager;
 	private Fragment[] fras = { f1, f2, f3 };
 	private static final int CAMERA_REQUEST = 1888;
+	private static final int ADD_ACTIVITY_CODE = 1002;
+	private int currentNoteId;
+
+	
 
 	/**
 	 * The number of pages (wizard steps) to show in this demo.
@@ -56,12 +72,12 @@ public class MainActivity extends FragmentActivity implements
 	 * The pager adapter, which provides the pages to the view pager widget.
 	 */
 	private PagerAdapter mPagerAdapter;
-	ImageButton btn1, btn2, btn3;
+	Button btn1, btn2, btn3;
 	int current = 0;
 	int next = 0;
 	int state = 0;
 
-	ImageButton[] btns = new ImageButton[3];
+	Button[] btns = new Button[3];
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -83,9 +99,11 @@ public class MainActivity extends FragmentActivity implements
 
 				for (int i = 0; i < btns.length; i++) {
 					if (i == current) {
-
+						btns[i].setTextColor(Color.rgb(29, 199, 3));
 						btns[i].getBackground().setAlpha(255);
 					} else {
+						btns[i].setTextColor(Color.rgb(89, 89, 89));
+
 						btns[i].getBackground().setAlpha(0);
 
 					}
@@ -130,7 +148,6 @@ public class MainActivity extends FragmentActivity implements
 
 					btns[current].getBackground().setAlpha(
 							(int) (255 * fadeOut));
-
 					btns[next].getBackground().setAlpha((int) (255 * fadeIn));
 
 					// btns[next].setText(fadeIn + "");
@@ -138,6 +155,7 @@ public class MainActivity extends FragmentActivity implements
 
 				}
 				if (orien == -1) {
+
 					btns[current].getBackground()
 							.setAlpha((int) (255 * fadeIn));
 
@@ -155,9 +173,9 @@ public class MainActivity extends FragmentActivity implements
 	}
 
 	private void initUI() {
-		btn1 = (ImageButton) findViewById(R.id.button1);
-		btn2 = (ImageButton) findViewById(R.id.button2);
-		btn3 = (ImageButton) findViewById(R.id.button3);
+		btn1 = (Button) findViewById(R.id.button1);
+		btn2 = (Button) findViewById(R.id.button2);
+		btn3 = (Button) findViewById(R.id.button3);
 		btn1.getBackground().setAlpha(255);
 		btn2.getBackground().setAlpha(0);
 		btn3.getBackground().setAlpha(0);
@@ -173,26 +191,31 @@ public class MainActivity extends FragmentActivity implements
 
 	@Override
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+		// Intent cameraIntent = new
+		// Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+		// startActivityForResult(cameraIntent, CAMERA_REQUEST);
 
-		if (item.getItemId() == R.id.artical_add) {
-			// Intent cameraIntent = new
-			// Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-			// startActivityForResult(cameraIntent, CAMERA_REQUEST);
+		switch (item.getItemId()) {
+		case R.id.artical_add:
+			Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+			startActivityForResult(cameraIntent, CAMERA_REQUEST);
 
+			// Intent intent1 = new Intent(MainActivity.this,
+			// CreateArticalActivity.class);
+			// startActivity(intent1);
+			break;
+		case R.id.activity_add:
+			Intent intent2 = new Intent(MainActivity.this,
+					CreateActivityActivity.class);
+			startActivity(intent2);
+			break;
+
+		default:
+			break;
 		}
-
 		return true;
 	}
 
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		if (requestCode == CAMERA_REQUEST) {
-			// System.exit(0);
-			Bitmap photo = (Bitmap) data.getExtras().get("data");
-			Toast.makeText(this, "return", Toast.LENGTH_LONG).show();
-			btns[1].setImageBitmap(photo);
-		}
-	}
 
 	@Override
 	public void onBackPressed() {
@@ -276,7 +299,6 @@ public class MainActivity extends FragmentActivity implements
 	public void onActivitySelected(RideActivity rideActivity) {
 		Intent intent = new Intent(this, ActivityDetialActivity.class);
 		intent.putExtra("rideactivity", rideActivity);
-
 		startActivity(intent);
 	}
 

@@ -15,12 +15,12 @@
         android:title="SubMenu">
         <menu>
             <item
-                android:id="@+id/artical_add"
-                android:icon="@drawable/bar_artical"
-                android:title="@string/add_acti"/>
-            <item
                 android:id="@+id/activity_add"
                 android:icon="@drawable/bar_activity"
+                android:title="@string/add_acti"/>
+            <item
+                android:id="@+id/artical_add"
+                android:icon="@drawable/bar_artical"
                 android:title="@string/add_arti"/>
             <item
                 android:id="@+id/team_create"

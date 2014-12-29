@@ -7,14 +7,14 @@
         android:id="@+id/from_where"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/title"
+        android:layout_alignLeft="@+id/title" android:textColor="#909090"
         android:layout_below="@+id/title"
         android:text="from where"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+        android:layout_width="wrap_content" android:textColor="#909090"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/from_where"
         android:layout_toRightOf="@+id/from_where"
@@ -23,7 +23,7 @@
 
     <TextView
         android:id="@+id/to_where"
-        android:layout_width="wrap_content"
+        android:layout_width="wrap_content" android:textColor="#909090"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView3"
         android:layout_toRightOf="@+id/textView3"

@@ -27,33 +27,48 @@
         android:layout_weight="0.25" />
 
     <LinearLayout
-        android:background="@drawable/bottom_bar_bg"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_bar_bg" >
 
-        <ImageButton
+        <Button
             android:id="@+id/button1"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@drawable/btn_bottom_bar"
-            android:src="@drawable/bar_article_color" />
+            android:drawableTop="@drawable/bottom_arti"
+            android:paddingBottom="2dp"
+            android:paddingTop="3dp"
+            android:text="@string/arti"
+            android:textColor="#1dc703"
+            android:textSize="12sp" />
 
-        <ImageButton
+        <Button
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@drawable/btn_bottom_bar"
-            android:src="@drawable/bar_activity_color" />
+            android:drawableTop="@drawable/bottom_acti"
+            android:paddingBottom="2dp"
+            android:paddingTop="3dp"
+            android:text="@string/acti"
+            android:textColor="#595959"
+            android:textSize="12sp" />
 
-        <ImageButton
+        <Button
             android:id="@+id/button3"
-            android:layout_width="0dp"
+            android:layout_width="4dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@drawable/btn_bottom_bar"
-            android:src="@drawable/bar_self_color" />
+            android:drawableTop="@drawable/bottom_me"
+            android:paddingBottom="2dp"
+            android:paddingTop="3dp"
+            android:text="@string/me"
+            android:textColor="#595959"
+            android:textSize="12sp" />
     </LinearLayout>
     <!-- #dddccc #daaaee #dddfff -->
 

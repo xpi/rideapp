@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/add_acti_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="29dp"
+        android:ems="10"
+        android:hint="Your Title"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/add_actidays_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/add_acticreate_date"
+        android:layout_alignBottom="@+id/add_acticreate_date"
+        android:layout_alignParentRight="true"
+        android:hint="Days Cost"
+        android:layout_toRightOf="@+id/add_acticreate_date"
+        android:ems="10"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/add_actidscri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/add_acticreate_date"
+        android:layout_marginTop="27dp"
+        android:ems="10"
+        android:hint="Dscriptions"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/add_acticreate_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/add_acti_title"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Begin Date"
+        android:inputType="date"
+        android:orientation="vertical" />
+
+</RelativeLayout>

@@ -65,7 +65,7 @@
         android:textSize="14sp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/user_team"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -77,11 +77,11 @@
         android:text="@string/current_location_shared" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/user_sett"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/user_team"
         android:layout_centerHorizontal="true"
         android:background="@drawable/btn_style2"
         android:drawableLeft="@drawable/icon_setting_zi"

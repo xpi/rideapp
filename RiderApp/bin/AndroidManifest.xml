@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="13"
+        android:minSdkVersion="14"
         android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -41,6 +41,21 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <!-- meta-data需要写在application中 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="NltAKQ2GaWmBagQy9um21W6B" />
+
         <activity
             android:name=".activity.LoginActivity"
             android:label="@string/back" >
@@ -66,11 +81,30 @@
             android:name=".activity.ActivityDetialActivity"
             android:label="@string/back" >
         </activity>
-         <activity
+        <activity
             android:name=".activity.MyArticalActivity"
             android:label="@string/back" >
         </activity>
+        <activity
+            android:name=".activity.MyActivityActivity"
+            android:label="@string/back" >
+        </activity>
+        <activity
+            android:name=".activity.MySettingActivity"
+            android:label="@string/back" >
+        </activity>
+        <activity
+            android:name=".activity.CreateArticalActivity"
+            android:label="@string/back" >
+        </activity>
+        <activity
+            android:name=".activity.CreateActivityActivity"
+            android:label="@string/back" >
+        </activity>
+        <activity
+            android:name=".activity.TeamMapActivity"
+            android:label="@string/back" >
+        </activity>
     </application>
-    
 
 </manifest>

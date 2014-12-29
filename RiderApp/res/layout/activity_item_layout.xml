@@ -6,11 +6,11 @@
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="10dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:paddingRight="6dp"
         android:scaleType="centerCrop"
         android:src="@drawable/haight_ashbury" />
 
@@ -20,7 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/acti_title"
         android:layout_below="@+id/acti_title"
-        android:text="目的地:" />
+        android:text="目的地:"
+        android:textColor="#909090" />
 
     <TextView
         android:id="@+id/textView2"
@@ -29,7 +30,8 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/textView1"
         android:text="出发地:"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#909090" />
 
     <TextView
         android:id="@+id/textView3"
@@ -38,7 +40,8 @@
         android:layout_alignLeft="@+id/textView2"
         android:layout_below="@+id/textView2"
         android:text="持续天数:"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#909090" />
 
     <TextView
         android:id="@+id/textView4"
@@ -47,7 +50,8 @@
         android:layout_alignLeft="@+id/textView3"
         android:layout_below="@+id/textView3"
         android:text="出发日期:"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#909090" />
 
     <TextView
         android:id="@+id/acti_title"
@@ -72,7 +76,8 @@
         android:ellipsize="end"
         android:singleLine="true"
         android:text="Small Text"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#909090" />
 
     <TextView
         android:id="@+id/acti_to_where"
@@ -84,7 +89,8 @@
         android:ellipsize="end"
         android:singleLine="true"
         android:text="Small Text"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#909090" />
 
     <TextView
         android:id="@+id/acti_from_where"
@@ -96,7 +102,8 @@
         android:ellipsize="end"
         android:singleLine="true"
         android:text="Small Text"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#909090" />
 
     <TextView
         android:id="@+id/begin_date"
@@ -109,7 +116,8 @@
         android:ellipsize="end"
         android:singleLine="true"
         android:text="Small Text"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#909090" />
 
     <TextView
         android:id="@+id/textView5"
@@ -118,7 +126,8 @@
         android:layout_alignLeft="@+id/textView4"
         android:layout_below="@+id/textView4"
         android:text="目前人数:"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#909090" />
 
     <TextView
         android:id="@+id/total_members"
@@ -131,6 +140,7 @@
         android:ellipsize="end"
         android:singleLine="true"
         android:text="Small Text"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#909090" />
 
 </RelativeLayout>
