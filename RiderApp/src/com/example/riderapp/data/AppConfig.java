@@ -1,0 +1,1 @@
+package com.example.riderapp.data;public class AppConfig {	public static final String WSDL = "http://192.168.1.102:8080/axis2/services/ComplexObj?wsdl";	public static final String WSDL_NAMESPACE = "http://test.com";}

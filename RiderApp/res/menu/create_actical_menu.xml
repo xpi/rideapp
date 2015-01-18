@@ -4,8 +4,15 @@
 
     <item
         android:id="@+id/bar_regist"
-        android:orderInCategory="1"
+        android:orderInCategory="2"
         android:showAsAction="always"
         android:title="@string/sent"/>
+    
+        <item
+        android:id="@+id/bar_takephoto"
+        android:orderInCategory="1"
+        android:icon="@drawable/bar_takephoto"
+        android:showAsAction="always"
+        android:title="@string/take_photo"/>
 
 </menu>

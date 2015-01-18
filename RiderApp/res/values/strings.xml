@@ -38,6 +38,7 @@
     <string name="current_location_shared">当前位置共享地图</string>
     <string name="join_team">加入位置共享</string>
     <string name="sent">发送</string>
+    <string name="take_photo">上传照片</string>
     <string name="staffloca">位置共享</string>
     <string name="hello">Hello World, LoadMoreListView!</string>
     <string name="pull_to_refresh_pull_label">"下拉刷新..."</string>

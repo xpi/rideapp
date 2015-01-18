@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import com.example.riderapp.R;
+import com.example.riderapp.data.AppConfig;
 import com.example.riderapp.webservice.WsClient;
 import com.squareup.okhttp.Headers;
 import com.squareup.okhttp.MediaType;
@@ -23,9 +24,6 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.MediaStore;
-import android.text.format.DateFormat;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -45,8 +43,6 @@ public class LoginActivity extends Activity {
 	private static final MediaType MEDIA_TYPE_PNG = MediaType
 			.parse("image/jpeg");
 
-	private static final int CAMERA_REQUEST = 1888;
-	private static final int ADD_ACTIVITY_CODE = 1002;
 	String imageToBeUpload;
 
 	@Override
@@ -55,12 +51,9 @@ public class LoginActivity extends Activity {
 		setContentView(R.layout.login_layout_normal);
 		login_btn = (Button) findViewById(R.id.btn_login);
 		tv_username = (TextView) findViewById(R.id.text_username);
-		imageView = (ImageView) findViewById(R.id.login_logo);
+		//imageView = (ImageView) findViewById(R.id.login_logo);
 		// http://localhost:8080/axis2/services/ComplexObj/getPerson?name=w&age=100
-		wsClient = new WsClient(
-				"http://192.168.1.102:8080/axis2/services/ComplexObj?wsdl",
-				"http://test.com");
-
+		wsClient = new WsClient(AppConfig.WSDL, AppConfig.WSDL_NAMESPACE);
 		login_btn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -129,7 +122,6 @@ public class LoginActivity extends Activity {
 			// Vector response = (Vector) result;
 			// Object[] objs = response.toArray();
 			Object result = "success";
-
 			OkHttpClient client = new OkHttpClient();
 			RequestBody requestBody = new MultipartBuilder()
 					.type(MultipartBuilder.FORM)

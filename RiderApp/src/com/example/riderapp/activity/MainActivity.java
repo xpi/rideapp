@@ -55,8 +55,6 @@ public class MainActivity extends FragmentActivity implements
 	private static final int ADD_ACTIVITY_CODE = 1002;
 	private int currentNoteId;
 
-	
-
 	/**
 	 * The number of pages (wizard steps) to show in this demo.
 	 */
@@ -91,85 +89,49 @@ public class MainActivity extends FragmentActivity implements
 		mPagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());
 		mPager.setAdapter(mPagerAdapter);
 		mPager.setCurrentItem(0);
-		mPager.setOnPageChangeListener(new OnPageChangeListener() {
+		mPager.setOnPageChangeListener(new PagerListener());
 
-			@Override
-			public void onPageSelected(int pagenum) {
-				current = pagenum;
+	}
 
-				for (int i = 0; i < btns.length; i++) {
-					if (i == current) {
-						btns[i].setTextColor(Color.rgb(29, 199, 3));
-						btns[i].getBackground().setAlpha(255);
-					} else {
-						btns[i].setTextColor(Color.rgb(89, 89, 89));
+	@Override
+	public boolean onMenuOpened(int featureId, Menu menu) {
+		setOverflowIconVisible(featureId, menu);
+		return super.onMenuOpened(featureId, menu);
+	}
 
-						btns[i].getBackground().setAlpha(0);
+	@Override
+	public void onActivitySelected(RideActivity rideActivity) {
+		Intent intent = new Intent(this, ActivityDetialActivity.class);
+		intent.putExtra("rideactivity", rideActivity);
+		startActivity(intent);
+	}
 
-					}
+	@Override
+	public void onArticalSelected(Artical artical) {
+		Intent intent = new Intent(this, ArticalDetialActivity.class);
+		intent.putExtra("artical", artical);
+		startActivity(intent);
+	}
 
+	@Override
+	public void onActivityIntent(Class<?> activity) {
+		Intent intent = new Intent(this, activity);
+		startActivity(intent);
+	}
+
+	// 显示actionbar中下拉菜单的图标
+	public static void setOverflowIconVisible(int featureId, Menu menu) {
+		if (featureId == Window.FEATURE_ACTION_BAR && menu != null) {
+			if (menu.getClass().getSimpleName().equals("MenuBuilder")) {
+				try {
+					Method m = menu.getClass().getDeclaredMethod(
+							"setOptionalIconsVisible", Boolean.TYPE);
+					m.setAccessible(true);
+					m.invoke(menu, true);
+				} catch (Exception e) {
 				}
 			}
-
-			@Override
-			public void onPageScrolled(int arg0, float arg1, int arg2) {
-				int orien;
-				if (state == 1 && arg1 != 0) {
-					if (current == arg0) {
-						orien = 1;
-						next = arg0 + 1;
-						changeBtnStyle(arg1, current, next, orien);
-						return;
-					}
-					orien = -1;
-					next = arg0;
-					changeBtnStyle(arg1, current, next, orien);
-				}
-
-			}
-
-			@Override
-			public void onPageScrollStateChanged(int arg0) {
-
-				state = arg0;
-				if (state == 2) {
-					btns[current].getBackground().setAlpha(255);
-					btns[next].getBackground().setAlpha(0);
-				}
-
-			}
-
-			// 渐变底部bar样式
-			private void changeBtnStyle(float size, int current, int next,
-					int orien) {
-				float fadeIn = (float) (Math.round(size * 100)) / 100;
-				float fadeOut = (float) (Math.round((1 - size) * 100)) / 100;
-				if (orien == 1) {
-
-					btns[current].getBackground().setAlpha(
-							(int) (255 * fadeOut));
-					btns[next].getBackground().setAlpha((int) (255 * fadeIn));
-
-					// btns[next].setText(fadeIn + "");
-					// btns[current].setText(fadeOut + "");
-
-				}
-				if (orien == -1) {
-
-					btns[current].getBackground()
-							.setAlpha((int) (255 * fadeIn));
-
-					btns[next].getBackground().setAlpha((int) (255 * fadeOut));
-
-					// btns[next].setText(fadeOut + "");
-					// btns[current].setText(fadeIn + "");
-
-				}
-
-			}
-
-		});
-
+		}
 	}
 
 	private void initUI() {
@@ -197,12 +159,13 @@ public class MainActivity extends FragmentActivity implements
 
 		switch (item.getItemId()) {
 		case R.id.artical_add:
-			Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-			startActivityForResult(cameraIntent, CAMERA_REQUEST);
+			// Intent cameraIntent = new
+			// Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+			// startActivityForResult(cameraIntent, CAMERA_REQUEST);
 
-			// Intent intent1 = new Intent(MainActivity.this,
-			// CreateArticalActivity.class);
-			// startActivity(intent1);
+			Intent intent1 = new Intent(MainActivity.this,
+					CreateArticalActivity.class);
+			startActivity(intent1);
 			break;
 		case R.id.activity_add:
 			Intent intent2 = new Intent(MainActivity.this,
@@ -215,7 +178,6 @@ public class MainActivity extends FragmentActivity implements
 		}
 		return true;
 	}
-
 
 	@Override
 	public void onBackPressed() {
@@ -264,6 +226,82 @@ public class MainActivity extends FragmentActivity implements
 		public int getCount() {
 			return NUM_PAGES;
 		}
+
+	}
+
+	class PagerListener implements OnPageChangeListener {
+
+		@Override
+		public void onPageSelected(int pagenum) {
+			current = pagenum;
+
+			for (int i = 0; i < btns.length; i++) {
+				if (i == current) {
+					btns[i].setTextColor(Color.rgb(29, 199, 3));
+					btns[i].getBackground().setAlpha(255);
+				} else {
+					btns[i].setTextColor(Color.rgb(89, 89, 89));
+
+					btns[i].getBackground().setAlpha(0);
+
+				}
+
+			}
+		}
+
+		@Override
+		public void onPageScrolled(int arg0, float arg1, int arg2) {
+			int orien;
+			if (state == 1 && arg1 != 0) {
+				if (current == arg0) {
+					orien = 1;
+					next = arg0 + 1;
+					changeBtnStyle(arg1, current, next, orien);
+					return;
+				}
+				orien = -1;
+				next = arg0;
+				changeBtnStyle(arg1, current, next, orien);
+			}
+
+		}
+
+		@Override
+		public void onPageScrollStateChanged(int arg0) {
+
+			state = arg0;
+			if (state == 2) {
+				btns[current].getBackground().setAlpha(255);
+				btns[next].getBackground().setAlpha(0);
+			}
+
+		}
+
+		// 渐变底部bar样式
+		private void changeBtnStyle(float size, int current, int next, int orien) {
+			float fadeIn = (float) (Math.round(size * 100)) / 100;
+			float fadeOut = (float) (Math.round((1 - size) * 100)) / 100;
+			if (orien == 1) {
+
+				btns[current].getBackground().setAlpha((int) (255 * fadeOut));
+				btns[next].getBackground().setAlpha((int) (255 * fadeIn));
+
+				// btns[next].setText(fadeIn + "");
+				// btns[current].setText(fadeOut + "");
+
+			}
+			if (orien == -1) {
+
+				btns[current].getBackground().setAlpha((int) (255 * fadeIn));
+
+				btns[next].getBackground().setAlpha((int) (255 * fadeOut));
+
+				// btns[next].setText(fadeOut + "");
+				// btns[current].setText(fadeIn + "");
+
+			}
+
+		}
 	}
 
 	// bottom bar lisetner
@@ -285,47 +323,6 @@ public class MainActivity extends FragmentActivity implements
 				mPager.setCurrentItem(2, false);
 				break;
 
-			}
-		}
-	}
-
-	@Override
-	public boolean onMenuOpened(int featureId, Menu menu) {
-		setOverflowIconVisible(featureId, menu);
-		return super.onMenuOpened(featureId, menu);
-	}
-
-	@Override
-	public void onActivitySelected(RideActivity rideActivity) {
-		Intent intent = new Intent(this, ActivityDetialActivity.class);
-		intent.putExtra("rideactivity", rideActivity);
-		startActivity(intent);
-	}
-
-	@Override
-	public void onArticalSelected(Artical artical) {
-		Intent intent = new Intent(this, ArticalDetialActivity.class);
-		intent.putExtra("artical", artical);
-		startActivity(intent);
-	}
-
-	@Override
-	public void onActivityIntent(Class<?> activity) {
-		Intent intent = new Intent(this, activity);
-		startActivity(intent);
-	}
-
-	// 显示actionbar中下拉菜单的图标
-	public static void setOverflowIconVisible(int featureId, Menu menu) {
-		if (featureId == Window.FEATURE_ACTION_BAR && menu != null) {
-			if (menu.getClass().getSimpleName().equals("MenuBuilder")) {
-				try {
-					Method m = menu.getClass().getDeclaredMethod(
-							"setOptionalIconsVisible", Boolean.TYPE);
-					m.setAccessible(true);
-					m.invoke(menu, true);
-				} catch (Exception e) {
-				}
 			}
 		}
 	}
