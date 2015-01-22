@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="logout_btn">注销</string>
-    <string name="app_name">我在这</string>
+    <string name="app_name">骑行吧</string>
     <string name="regist">注册</string>
     <string name="my_artical">  我的游记</string>
     <string name="my_activity">  我的活动</string>
     <string name="my_save">  我的收藏</string>
     <string name="my_join_acti">  已加入活动</string>
     <string name="hint_reinputpwd">确认密码</string>
+
+    <string name="hint_nickname">称号</string>
     <string name="userName">用户名:</string>
     <string name="userPwd">密码:</string>
     <string name="chengePwd">修改密码</string>
@@ -33,6 +34,7 @@
     <string name="me">我</string>
     <string name="team_create">创建队伍</string>
     <string name="team_join">加入队伍</string>
+    <string name="acti_join">加入活动</string>
     <string name="add_acti">发布活动</string>
     <string name="add_arti">发表游记</string>
     <string name="current_location_shared">当前位置共享地图</string>

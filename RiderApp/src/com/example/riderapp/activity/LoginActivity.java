@@ -51,8 +51,10 @@ public class LoginActivity extends Activity {
 		setContentView(R.layout.login_layout_normal);
 		login_btn = (Button) findViewById(R.id.btn_login);
 		tv_username = (TextView) findViewById(R.id.text_username);
-		//imageView = (ImageView) findViewById(R.id.login_logo);
-		// http://localhost:8080/axis2/services/ComplexObj/getPerson?name=w&age=100
+	    imageView = (ImageView) findViewById(R.id.login_logo);
+	    
+		Picasso.with(this).load("http://pic16.nipic.com/20110823/6081234_144245260084_2.jpg")
+		.into(imageView);
 		wsClient = new WsClient(AppConfig.WSDL, AppConfig.WSDL_NAMESPACE);
 		login_btn.setOnClickListener(new View.OnClickListener() {
 			@Override

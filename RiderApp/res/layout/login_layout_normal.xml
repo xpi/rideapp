@@ -5,14 +5,14 @@
     android:background="#ffffff"
     >
 
-<!--     <ImageView
+    <ImageView
         android:id="@+id/login_logo"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/bar_location" /> -->
+        android:src="@drawable/bar_location" /> 
 
     <RelativeLayout
         android:layout_width="fill_parent"
