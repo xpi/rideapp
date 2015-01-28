@@ -105,6 +105,14 @@
             android:name=".activity.TeamMapActivity"
             android:label="@string/back" >
         </activity>
+        <activity
+            android:name=".activity.ChangePwdActivity"
+            android:label="@string/back" >
+        </activity>
+        <activity
+            android:name=".activity.FindPwdActivity"
+            android:label="@string/back" >
+        </activity>
     </application>
 
 </manifest>

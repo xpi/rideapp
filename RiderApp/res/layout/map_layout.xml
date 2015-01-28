@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
         android:src="@drawable/ic_action_list" />
 
 </RelativeLayout>

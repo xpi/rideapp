@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    android:background="#ffffff"
-    >
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
 
     <ImageView
         android:id="@+id/login_logo"
@@ -11,8 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/bar_location" /> 
+        android:contentDescription="@string/app_name" />
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -21,26 +19,13 @@
         android:layout_alignParentLeft="true"
         android:padding="20dp" >
 
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/text_password"
-            android:layout_alignRight="@+id/text_password"
-            android:layout_below="@+id/text_password"
-            android:layout_marginTop="18dp"
-            android:background="@drawable/btn_style"
-            android:text="@string/login"
-            android:textColor="@color/btn_text_color" />
-
         <EditText
             android:id="@+id/text_username"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/text_password"
-            android:layout_alignParentBottom="true"
-            android:layout_alignRight="@+id/text_password"
-            android:layout_marginBottom="147dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
             android:background="@drawable/text_edit_style"
             android:ems="10"
             android:hint="@string/noteInputUser"
@@ -54,14 +39,24 @@
             android:id="@+id/text_password"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/text_username"
-            android:layout_marginTop="62dp"
+            android:layout_below="@+id/text_username"
+            android:layout_centerHorizontal="true"
             android:background="@drawable/text_edit_style"
             android:ems="10"
             android:hint="@string/noteInputPwd"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
             android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_password"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_style"
+            android:text="@string/login"
+            android:textColor="@color/btn_text_color" />
     </RelativeLayout>
 
 </RelativeLayout>

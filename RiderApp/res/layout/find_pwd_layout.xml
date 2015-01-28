@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_colar" >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/text_edit_style"
+        android:ems="10"
+        android:hint="请输入邮箱"
+        android:imeOptions="actionNext"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignRight="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_style"
+        android:text="发送"
+        android:textColor="#fff" />
+
+</RelativeLayout>

@@ -1,1 +1,1 @@
-package com.example.riderapp.data;public class ArticalDataSource {}
+package com.example.riderapp.data;public class ArticalDataSource {		}

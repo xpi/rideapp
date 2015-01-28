@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.riderapp.MainActivity" >
+
+    <item
+        android:id="@+id/bar_sent_acti"
+        android:orderInCategory="2"
+        android:showAsAction="always"
+        android:title="@string/sent"/>
+    
+      
+</menu>

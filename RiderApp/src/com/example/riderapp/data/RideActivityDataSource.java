@@ -1,1 +1,1 @@
-package com.example.riderapp.data;public class RideActivityDataSource {}
+package com.example.riderapp.data;import android.content.Context;import android.content.SharedPreferences;import android.widget.ShareActionProvider;public class RideActivityDataSource {	private SharedPreferences preferences;	public RideActivityDataSource(Context context) {		this.preferences = context.getSharedPreferences(AppConfig.PREFKEY,				Context.MODE_PRIVATE);											}		}
